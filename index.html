@@ -15,11 +15,42 @@
             margin: 20px;
             color: #333;
             }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Category Button */
+    .category-btn {
+        background-color: #006400;
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        display: block;
+        margin: 20px auto 10px;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+    }
+        .category-btn:hover{
+            background-color: #228B22
+        /* Product Grid*/
             .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             padding: 20px;
+            justify-items: center;
+            animation: fadeIn 0.3s ease-in-out;
             }
             .card {
             background: #fff;
@@ -28,6 +59,8 @@
             overflow: hidden;
             text-align: center;
             transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            max-width: 260px;
             }
             .card:hover {
             transform: translateY(-4px);
@@ -54,168 +87,157 @@
             color: #777;
             font-size: 14px;
             }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: scale(0.98); }
+                to { opacity: 1; transform: scale(1); }
+            }
     </style>
 </head>
 <body>
-<h1>🛍️ Bulkbarrel Wholesale Catalogue</h1>
-<div class="container">
+    
+<header>
+    <img src="img/logo.png" alt="Bulkbarrel Wholesale Logo" style="width: 80px; border-radius: 8px;">
+    <h1>Bulkbarrel Wholesale Catalogue</h1>
+</header>
 
+<!-- Category 1 -->
+<button class="category-btn" onclick="toggleCategory('Alcohol Beverages')">Alcohol Beverages</button>
+<div class="container" id="beverages">
 <div class="card">
   <img src="img/Namaqua 5l.jpg" alt="Namaqua 5L*4">
   <h3>Namaqua 5L*4</h3>
   <p>$54.00</p>
 </div>
-
 <div class="card">
   <img src="img/raindance.jpg" alt="Raindance 5L*4">
   <h3>Raindance 5L*4</h3>
   <p>$54.00</p>
 </div>
-
 <div class="card">
   <img src="img/smith n co 5l.jpg" alt="Smith & Co 5L*4">
   <h3>Smith & Co 5L*4</h3>
   <p>$54.00</p>
 </div>
-
 <div class="card">
   <img src="img/namaque - Copy.png" alt="Namaqua 750ml*6">
   <h3>Namaqua 750ml*6</h3>
   <p>$28.80</p>
 </div>
-
 <div class="card">
   <img src="img/smith n core - Copy.jpg" alt="Smith & Co 750ml*6">
   <h3>Smith & Co 750ml*6</h3>
   <p>$28.80</p>
 </div>
-
 <div class="card">
   <img src="img/4th street - Copy.png" alt="4th Street 750ml*6">
   <h3>4th Street 750ml*6</h3>
   <p>$28.80</p>
 </div>
-
 <div class="card">
   <img src="img/bella vino.jpg" alt="Bella Vino 750ml*6">
   <h3>Bella Vino 750ml*6</h3>
   <p>$28.80</p>
 </div>
-
 <div class="card">
   <img src="img/three monkeys.jpg" alt="3 Monkeys 750ml*6">
   <h3>3 Monkeys 750ml*6</h3>
   <p>$28.80</p>
 </div>
-
 <div class="card">
   <img src="img/graham beck.jpg" alt="GrahamBeck 750ml*6">
   <h3>Graham Beck 750ml*6</h3>
   <p>$99.00</p>
 </div>
-
 <div class="card">
   <img src="img/rupperts n rothschild.ashx" alt="Rupperts n Rothschild 750ml*6">
   <h3>Rupperts n Rothschild 750ml*6</h3>
   <p>$120.00</p>
 </div>
-
 <div class="card">
   <img src="img/warwick 1st lady.jpg" alt="Warwick 1st lady 750ml*6">
   <h3>Warwick 1st lady 750ml*6</h3>
   <p>$60.00</p>
 </div>
-
 <div class="card">
   <img src="img/protea wine.jpg" alt="Anthonji Protea 750ml*6">
   <h3>Anthonji Protea 750ml*6</h3>
   <p>$45.00</p>
 </div>
-
 <div class="card">
   <img src="img/pogues - Copy.jpg" alt="Westcork Pogues 750ml*6">
   <h3>Westcork Pogues 750ml*6</h3>
   <p>$120.00</p>
 </div>
-
 <div class="card">
   <img src="img/whitestone - Copy.jpg" alt="Whitestone Gin 750ml*6">
   <h3>Whitestone Gin 750ml*6</h3>
   <p>$28.80</p>
 </div>
-
 <div class="card">
   <img src="img/haserache.jpg" alt="Haserache 750ml*6">
   <h3>Haserache 750ml*6</h3>
   <p>$78.00</p>
 </div>
-
 <div class="card">
   <img src="img/jaiger - Copy.jpeg" alt="Jagermeister 750ml*6">
   <h3>Jagermeister 750ml*6</h3>
   <p>$120.00</p>
 </div>
-
 <div class="card">
   <img src="img/Amarula.jpg" alt="Amarula 750ml*6">
   <h3>Amarula 750ml*6</h3>
   <p>$72.00</p>
 </div>
-
 <div class="card">
   <img src="img/best cream.jpg" alt="Best Cream 750ml*12">
   <h3>Best Cream 750ml*12</h3>
   <p>$120.00</p>
 </div>
-
 <div class="card">
   <img src="img/best whisky.jpg" alt="Best Whiskey 750ml*12">
   <h3>Best Whisky 750ml*12</h3>
   <p>$84.00</p>
 </div>
-
 <div class="card">
   <img src="img/best gin.jpg" alt="Best Gin 750ml*12">
   <h3>Best Gin 750ml*12</h3>
   <p>$75.00</p>
 </div>
-
 <div class="card">
   <img src="img/klipdrift - Copy.png" alt="Klipdrift Brandy 750ml*12">
   <h3>Kilpdrift Brandy 750ml*12</h3>
   <p>$120.00</p>
 </div>
-
 <div class="card">
   <img src="img/smirnof.jpg" alt="Smirfnoff 750ml*12">
   <h3>Smirnoff Vodka 750ml*12</h3>
   <p>$96.00</p>
 </div>
-
 <div class="card">
   <img src="img/viceroy.jpg" alt="Viceroy Brandy 750ml*12">
   <h3>Viceroy Brandy 750ml*12</h3>
   <p>$90.00</p>
 </div>
-
 <div class="card">
   <img src="img/Nikolai 2.jpg" alt="Nikolai Vodka 750ml*12">
   <h3>Nikolai Vodka 750ml*12</h3>
   <p>$57.60</p>
 </div>
-
 <div class="card">
   <img src="img/gilberts - Copy.jpg" alt="Gilberts Gin 750ml*12">
   <h3>Gilberts Gin 750ml*12</h3>
   <p>$57.60</p>
 </div>
-
 <div class="card">
   <img src="img/gordons gin.jpg" alt"Gordons Gin 750ml*12">
   <h3>Gordons Gin 750ml*12</h3>
   <p>$84.00</p>
 </div>
+</div>
 
+<!-- Category 2 -->
+<button class="category-btn" onclick="toggleCategory('Detergents')">🧼 Detergents</button>
+<div class="container" id="cleaning">
 <div class="card">
   <img src="img/lays.jpg" alt"20*125g">
   <h3>lays 20*125g</h3>
@@ -235,4 +257,5 @@
 <footer>© 2025 Bulkbarrel Wholesale | Shared via WhatsApp Catalogue</footer>
 </body>
 </html>
+
 
