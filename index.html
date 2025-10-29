@@ -238,25 +238,44 @@
 </div>
 
 <!-- Category 2 -->
-<button class="category-btn" onclick="toggleCategory('Detergents')">🧼 Detergents</button>
+<button class="category-btn" onclick="toggleCategory('cleaning')">🧼 Detergents</button>
 <div class="container" id="cleaning">
     <div class="card">
-        <img src="img/lays.jpg" alt"20*125g">
-        <h3>lays 20*125g</h3>
+        <img src="img/lays.jpg" alt="Lays 20*125g" loading="lazy">
+        <h3>Lays 20*125g</h3>
         <p>$84.00</p>
+</div>
+<div class="card">
+        <img src="img/smith n core - Copy.jpg" alt="Smith & Co 750ml*6">
+        <h3>Smith & Co 750ml*6</h3>
+        <p>$28.80</p>
     </div>
 </div>
-<div style="text-align:center; margin: 30px 0;">
-  <a href="https://wa.me/263781920554?text=Hi%20I%27d%20like%20to%20order%20from%20your%20catalogue" 
-     target="_blank" 
-     style="background-color:#25D366; color:white; padding:15px 25px; border-radius:8px; text-decoration:line through; font-weight:bold; font-size:12px;">
-     💬 Contact Us on WhatsApp
-  </a>
+
+    
+<!-- WhatsApp Button -->
+<div class="wa-container">
+    <a href="https://wa.me/263781920554?text=Hi%20I%27d%20like%20to%20order%20from%20your%20catalogue"
+       target="_blank"
+       class="whatsapp-btn">
+       💬 Contact Us on WhatsApp
+    </a>
 </div>
 
-
-</div>
 <footer>© 2025 Bulkbarrel Wholesale | Shared via WhatsApp Catalogue</footer>
+
+<!-- Toggle Script -->
+<script>
+function toggleCategory(id) {
+    const section = document.getElementById(id);
+    if (section.style.display === "grid") {
+        section.style.display = "none";
+    } else {
+        section.style.display = "grid";
+    }
+}
+</script>
+
 </body>
 </html>
 
