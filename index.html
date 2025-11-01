@@ -12,10 +12,52 @@
         background: #f8f9fa;
     }
 
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        flex-wrap: wrap;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Logo styling */
+    header img {
+        width: 100px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Animated gold title */
     h1 {
-        text-align: center;
-        margin: 20px;
-        color: #333;
+        margin: 0;
+        font-size: 1.9em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-family: 'Poppins', 'Segoe UI', sans-serif;
+
+        background: linear-gradient(270deg, #FFD700, #FFB700, #FFF4B0, #FFD700);
+        background-size: 600% 600%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        animation: goldShine 6s ease infinite;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes goldShine {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
     header {
@@ -150,8 +192,8 @@
 <body>
 
 <header>
-    <img src="img/logo.png" alt="Bulkbarrel Wholesale Logo" style="width: 80px; border-radius: 8px;">
-    <h1>Bulkbarrel Wholesale Catalogue</h1>
+    <img src="img/logo.png" alt="Bulkbarrel Wholesale Logo" style="width: 150px; border-radius: 8px;">
+    <h1>Bulkbarrel Wholesale</h1>
 </header>
 
 <!-- Category 1 -->
